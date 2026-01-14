@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopsy - E-Commerce</title>
+     <link rel="stylesheet" href="website.css">
+    
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🛍️ Shopsy</div>
+            <input type="text" id="search" placeholder="Search...">
+            <button id="cart-btn" class="cart-btn">🛒 <span id="count">0</span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Welcome to Shopsy</h1>
+        <p>Amazing Products at Best Prices</p>
+        <button onclick="document.querySelector('.products').scrollIntoView()">Shop Now</button>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="electronics">Electronics</button>
+        <button class="filter-btn" data-filter="fashion">Fashion</button>
+        <button class="filter-btn" data-filter="home">Home</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- Cart -->
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <button id="close-cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div>Total: $<span id="total">0</span></div>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <button class="close" id="close-modal">✕</button>
+            <div class="modal-img" id="modal-img"></div>
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc"></p>
+                <div class="price">
+                    <span id="modal-price"></span>
+                    <span id="modal-old-price"></span>
+                </div>
+                <input type="number" id="qty" value="1" min="1" style="width:60px;padding:5px;">
+                <button id="add-modal">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="website.js"></script>
+
+    
+</body>
+</html>

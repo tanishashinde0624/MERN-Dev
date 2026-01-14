@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Order Cart Calculator</title>
+    <style>
+        h2{
+            color: rgb(20, 4, 52);
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <h2>Online Order Cart Calculator</h2>
+
+    <button onclick="calculateCart()">Calculate Cart</button>
+
+    <script>
+        function calculateCart() {
+
+            let n = Number(prompt("Enter number of products"));
+            let prices = [];
+            let total = 0;
+
+            for (let i = 0; i < n; i++) {
+                prices[i] = Number(prompt("Enter price of product " + (i + 1)));
+                total = total + prices[i];
+            }
+
+            let average = total / n;
+
+            document.write("Total Amount: " + total+ "<br>");
+            document.write("Average Price: " + average);
+        }
+    </script>
+
+</body>
+</html>

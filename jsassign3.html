@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Calculator</title>
+    <style>
+       h2{
+        color: rgb(12, 2, 36);
+        text-decoration-line: underline;
+       }
+       button{
+        color: rgb(103, 103, 164);
+       }
+    </style>
+</head>
+<body>
+    <h2>Attendence Calculator</h2>
+
+    <button onclick="calculateattendence()">Calculate Cart</button>
+    <script>
+        function calculateattendence(){
+    let n = Number(prompt("Enter number of interns"));
+    let attendance = [];
+    let present = 0;
+    let absent = 0;
+
+    for (let i = 0; i < n; i++) {
+        attendance[i] = prompt("Enter attendance for intern " + (i + 1));
+
+        if (attendance[i] === "P") {
+            present++;
+        } else if (attendance[i] === "A") {
+            absent++;
+        }
+    }
+
+    document.write("Present: " + present + "<br>");
+    document.write("Absent: " + absent);
+}
+</script>
+</body>
+</html>

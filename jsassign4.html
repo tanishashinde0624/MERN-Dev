@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Stock Alert System</title>
+</head>
+<body>
+    <script>
+    let stock = eval(prompt("Enter stock values as an array"));
+
+    for (let i = 0; i < stock.length; i++) {
+        if (stock[i] < 20) {
+            document.write("Product " + (i + 1) + ": Reorder Required<br>");
+        } else {
+            document.write("Product " + (i + 1) + ": Stock OK<br>");
+        }
+    }
+    </script>
+</body>
+</html>
